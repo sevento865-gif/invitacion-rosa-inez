@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Cena por mi Graduación Rosa Inez</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  scroll-behavior: smooth;
+  background: linear-gradient(180deg, #fff8f0, #f3e1c9);
+  color: #5c4433;
+  width: 100vw;
+  max-width: 420px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero { padding: 30px 20px; }
+
+.decor-top, .decor-bottom {
+  width: 80%;
+  max-width: 260px;
+}
+
+.decor-top {margin-bottom: -40px;}
+.decor-bottom {margin-top: -40px;}
+
+.foto-marco {
+  width: 260px;
+  height: 320px;
+  margin: auto;
+  border-radius: 140px 140px 30px 30px;
+  overflow: hidden;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+  background:rgb(222, 166, 166);
+}
+
+.foto-marco img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mini-title {
+  font-size: 12px;
+  letter-spacing: 3px;
+  color: #b8894a;
+  margin-top: 20px;
+}
+
+.main-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 38px;
+  margin: 5px 0;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #7a5b2f;
+}
+
+.hero-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 26px;
+  color: #b8894a;
+  margin-top: 10px;
+}
+
+.section { padding: 35px 20px; }
+
+.section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 28px;
+  color: #7a5b2f;
+  margin-bottom: 15px;
+}
+
+.text {
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.details {
+  background: rgba(255,245,230,0.85);
+  margin: 20px 0;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.detail {
+  margin: 10px 0;
+  font-weight: 500;
+}
+
+.btn {
+  display: block;
+  margin: 15px auto;
+  width: 80%;
+  padding: 15px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #b8894a, #d1a35a);
+  color: white;
+}
+
+.btn-secondary {
+  border: 2px solid #b8894a;
+  color: #7a5b2f;
+}
+
+.quote {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  padding: 40px 20px;
+}
+
+.footer {
+  font-size: 12px;
+  padding: 20px;
+}
+
+/* CONTADOR PREMIUM */
+.box {
+  background: white;
+  padding: 12px;
+  border-radius: 15px;
+  width: 70px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.box div {
+  font-size: 22px;
+  font-weight: 600;
+  color: #b8894a;
+}
+
+.box span {
+  font-size: 12px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- MUSICA -->
+<audio id="music" autoplay loop>
+  <source src="rosi.mp3" type="audio/mpeg">
+</audio>
+
+<!-- PORTADA -->
+<section class="hero">
+  <img src="flores1.png" class="decor-top">
+  <div class="foto-marco">
+    <img src="ROSIYHEA.jpg">
+  </div>
+  <img src="flores1.png" class="decor-bottom">
+
+  <div class="mini-title">Invitación Especial</div>
+  <div class="main-title">Graduación</div>
+  <div class="subtitle">Licenciatura de Enfermería</div>
+  <div class="hero-name">LICEN ROSA INEZ GUTIERREZ SALDAÑA</div>
+</section>
+
+<section class="section">
+  <div class="section-title">Con gran alegría</div>
+  <p class="text">
+    Después de años de esfuerzo y dedicación, te invito a celebrar uno de los momentos más importantes de mi vida: mi graduación.
+  </p>
+</section>
+
+<!-- DETALLES -->
+<section class="details">
+  <div class="detail"><strong>Fecha:</strong> 17/04/2026</div>
+  <div class="detail"><strong>Hora:</strong> 20:00</div>
+  <div class="detail"><strong>Lugar:</strong> Mi hogar</div>
+  <div class="detail"><strong>Vestimenta:</strong> Formal / Elegante</div>
+</section>
+
+<!-- CONTADOR -->
+<section class="section">
+  <div class="section-title">Cuenta regresiva</div>
+
+  <div style="display:flex; justify-content:center; gap:10px;">
+    <div class="box"><div id="days">0</div><span>Días</span></div>
+    <div class="box"><div id="hours">0</div><span>Horas</span></div>
+    <div class="box"><div id="minutes">0</div><span>Min</span></div>
+    <div class="box"><div id="seconds">0</div><span>Seg</span></div>
+  </div>
+</section>
+
+<!-- BOTONES -->
+<section class="section">
+  <a href="https://wa.me/59178454380" class="btn btn-primary">Confirmar asistencia</a>
+  <a href="https://maps.app.goo.gl/WiWKMLxGy1BtVuYy7" class="btn btn-secondary">Ver ubicación</a>
+</section>
+
+<div class="quote">“Tu presencia hará este día aún más especial”</div>
+
+<!-- GALERIA -->
+<section class="section">
+  <div class="section-title">Momentos especiales</div>
+  <div style="display:flex; overflow-x:scroll; gap:10px;">
+    <img src="comadres.jpg" style="width:120px; border-radius:15px;">
+    <img src="holi.jpg" style="width:120px; border-radius:15px;">
+    <img src="tiap.jpg" style="width:120px; border-radius:15px;">
+  </div>
+</section>
+
+<!-- MENSAJE -->
+<section class="section">
+  <div class="section-title">Gracias</div>
+  <p class="text">
+    Gracias por acompañarme en este camino lleno de retos, aprendizajes y sueños cumplidos 💖
+  </p>
+</section>
+
+<div class="footer">Hecho con amor ✨</div>
+
+<script>
+// activar música en celular
+document.addEventListener("click", function() {
+  document.getElementById("music").play();
+}, { once: true });
+
+// contador
+const eventDate = new Date("April 17, 2026 20:00:00").getTime();
+
+function updateCountdown() {
+  const now = new Date().getTime();
+  const diff = eventDate - now;
+
+  const d = Math.floor(diff / (1000*60*60*24));
+  const h = Math.floor((diff/(1000*60*60))%24);
+  const m = Math.floor((diff/(1000*60))%60);
+  const s = Math.floor((diff/1000)%60);
+
+  document.getElementById("days").innerHTML = d;
+  document.getElementById("hours").innerHTML = h;
+  document.getElementById("minutes").innerHTML = m;
+  document.getElementById("seconds").innerHTML = s;
+}
+
+setInterval(updateCountdown,1000);
+updateCountdown();
+</script>
+
+</body>
+</html>
